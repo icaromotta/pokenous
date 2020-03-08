@@ -18,9 +18,13 @@ export class PokemonService {
 
   listAll() {
     return this.http.get<Pokemon[]>(`${this.API}/`)
+      .pipe()
+  }
+
+  getPokemonDetail(pokemonId: any) {
+    return this.http.get<Pokemon>(`${this.API}/${pokemonId}`)
       .pipe(
-        delay(1000),
-        tap(console.log)
+        // tap(console.log)
       )
   }
 
