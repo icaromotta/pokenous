@@ -10,6 +10,7 @@ export class PokemonPartyComponent implements OnInit {
 
   public pokemons = []
   private pokemonGo = {}
+  public searchText: string
   
   constructor(private pokemonService: PokemonService) { }
 
