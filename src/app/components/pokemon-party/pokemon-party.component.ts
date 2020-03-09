@@ -8,7 +8,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class PokemonPartyComponent implements OnInit {
 
-  private pokemons = []
+  public pokemons = []
   private pokemonGo = {}
   
   constructor(private pokemonService: PokemonService) { }

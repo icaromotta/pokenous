@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class PokemonDetailComponent implements OnInit {
 
   private pokemonId: string;
-  private pokemon: any = '';
+  public pokemon: any = '';
 
   constructor(private actRoute: ActivatedRoute,
               private pokemonService: PokemonService) {
