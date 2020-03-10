@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  API: '/'
+  API: 'http://glacial-caverns-98209.herokuapp.com/'
 };
