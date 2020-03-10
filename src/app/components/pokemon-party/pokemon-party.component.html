@@ -1,9 +1,9 @@
-<div class="container mt-3">
+<div class="party container mt-3">
   <div class="row">
-    <input class="form-control mt-1" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="001, 002... ou nome" style="position: fixed; z-index: 1; width: 30%">
+    <input class="form-control mt-1" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="001, 002... ou nome">
     <div class="col-lg-3 col-md-6 col-sm-6 mt-5" *ngFor="let pokemon of pokemons| filter:searchText">
       <div class="card mb-2">
-        <img src="{{ pokemon.sprites.large }}" style="width: 200px;" class="card-img-top" alt="...">
+        <img src="{{ pokemon.sprites.large }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{ pokemon.name }}</h5>
           <p class="card-text"></p>

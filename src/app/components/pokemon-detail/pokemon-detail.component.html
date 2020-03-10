@@ -1,12 +1,12 @@
-<div class="container mt-5" style="background-color: lightcoral; width: 35%; text-align: center; padding: 10%; border-radius: 50%;">
-    <img src="{{ pokemon.sprites.animated }}" style="width: 200px" alt="">
+<div class="detail container mt-5">
+    <img src="{{ pokemon.sprites.animated }}" alt="">
 </div>
 
-<div class="container mt-3" style="width: 40%; text-align: center;">
-  <ul style="list-style: none; padding: 0%; margin: 0%; font-size: 3em; font-weight: bold; color: cornflowerblue">
-    <li><span style="color: gray">Nome:</span> {{ pokemon.name }}</li>
-    <li><span style="color: gray">Ataque:</span> {{ pokemon.attack }}</li>
-    <li><span style="color: gray">Defesa:</span> {{ pokemon.defense }}</li>
-    <li><span style="color: gray">Velocidade:</span> {{ pokemon.speed }}</li>
+<div class="deatail__pokemon container mt-3">
+  <ul>
+    <li><span>Nome:</span> {{ pokemon.name }}</li>
+    <li><span>Ataque:</span> {{ pokemon.attack }}</li>
+    <li><span>Defesa:</span> {{ pokemon.defense }}</li>
+    <li><span>Velocidade:</span> {{ pokemon.speed }}</li>
   </ul>
 </div>

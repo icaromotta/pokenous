@@ -1,0 +1,29 @@
+.detail {
+  background-color: lightcoral;
+  width: 35%;
+  text-align: center;
+  padding: 10%;
+  border-radius: 50%;
+
+  img {
+    width: 200px
+  }
+}
+
+.deatail__pokemon {
+  width: 40%;
+  text-align: center;
+
+  ul {
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+    font-size: 3em;
+    font-weight: bold;
+    color: cornflowerblue;
+    
+    span {
+      color: gray
+    }
+  }
+}
