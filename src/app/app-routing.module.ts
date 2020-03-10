@@ -6,7 +6,7 @@ import { PokemonPartyComponent } from './components/pokemon-party/pokemon-party.
 const routes: Routes = [
   { path: '', component: PokemonPartyComponent },
   { path: 'pokemon/:id', component: PokemonDetailComponent }
-];
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
