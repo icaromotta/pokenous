@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API: 'http://glacial-caverns-98209.herokuapp.com/'
+  API: 'https://glacial-caverns-98209.herokuapp.com/'
 };
 
 /*
