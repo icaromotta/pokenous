@@ -1,15 +1,17 @@
 .party {
-    
-    input {
-        position: fixed; 
-        z-index: 1; 
-        width: 30%
-    }
 
-    card {
+  input {
+    position: fixed;
+    z-index: 1;
+    width: 30%
+  }
 
-        img {
-            width: 200px;
-        }
+  .card {
+
+    width: 100%;
+
+    img {
+      width: 150px;
     }
+  }
 }
