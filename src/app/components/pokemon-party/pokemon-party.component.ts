@@ -12,6 +12,7 @@ export class PokemonPartyComponent implements OnInit {
   private pokemonGo = {}
   public searchText: string
   public pokemonDetail = {
+    name: '',
     hp: '',
     attack: '',
     defense: '',
