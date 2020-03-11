@@ -11,7 +11,7 @@ import { PokemonInterface } from '../../interfaces/pokemon'
 export class PokemonPartyComponent implements OnInit {
 
   public pokemons$: Observable<PokemonInterface[]>
-
+  public loading: any
   public pokemons = []
   private pokemonGo = {}
   public searchText: string
