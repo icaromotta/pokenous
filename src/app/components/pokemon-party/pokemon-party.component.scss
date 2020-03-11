@@ -17,9 +17,24 @@
 
       &:hover {
         background-color: rgba(127, 255, 212, 0.418);
+        border: 2px solid #6f42c1;
+      }
+
+      .party_action {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
       }
     }
+  }
 
-    
+  .modal{
+    .modal-body {
+      ul {
+        list-style: none;
+        padding: 0%;
+        margin: 0%;
+      }
+    }
   }
 }

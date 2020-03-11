@@ -11,6 +11,7 @@ export class PokemonPartyComponent implements OnInit {
   public pokemons = []
   private pokemonGo = {}
   public searchText: string
+  public pokemonDetail = {}
   
   constructor(private pokemonService: PokemonService) { }
 
@@ -24,4 +25,8 @@ export class PokemonPartyComponent implements OnInit {
   indicatesForBattle(pokemon: any) {
     this.pokemonGo = pokemon
   }
+
+ loadInfosPokemon(pokemon: any) {
+  this.pokemonDetail = pokemon
+ }
 }
