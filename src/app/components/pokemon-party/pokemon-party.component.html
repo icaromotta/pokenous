@@ -2,7 +2,8 @@
   <div class="row" *ngIf="pokemons$ | async; else loading">
     <input class="form-control mt-1" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
       placeholder="001, 002... ou nome">
-    <div class="party_item col-lg-3 col-md-6 col-sm-6 mt-5" *ngFor="let pokemon of pokemons$ | async | filter:searchText">
+    <div class="party_item col-lg-3 col-md-6 col-sm-6 mt-5"
+      *ngFor="let pokemon of pokemons$ | async | filter:searchText">
       <div class="card">
         <img src="{{ pokemon.sprites.normal }}" class="card-img-top" alt="...">
         <div class="card-body">
@@ -46,33 +47,31 @@
       </div>
     </div>
   </div>
-
-  
 </div>
 
-<ng-template #loading>
-    <div class="spinner-grow text-primary" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow text-secondary" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow text-success" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow text-danger" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow text-warning" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow text-info" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow text-light" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow text-dark" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-  </ng-template>
+<div class="party_spinners d-flex flex-row justify-content-center">
+  <div class="spinner-grow text-primary" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner-grow text-secondary" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner-grow text-success" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner-grow text-danger" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner-grow text-warning" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner-grow text-info" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner-grow text-light" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner-grow text-dark" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
