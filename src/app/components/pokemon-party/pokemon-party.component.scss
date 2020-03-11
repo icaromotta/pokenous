@@ -3,12 +3,23 @@
   input {
     position: fixed;
     z-index: 1;
-    width: 30%
+    width: 30%;
+    background-color: #e2e2e2;
   }
 
   .party_item {
 
     text-align: center;
 
+    .card {
+      
+      cursor: pointer; 
+
+      &:hover {
+        background-color: rgba(127, 255, 212, 0.418);
+      }
+    }
+
+    
   }
 }
