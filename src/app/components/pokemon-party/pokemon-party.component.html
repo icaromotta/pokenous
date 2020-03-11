@@ -1,25 +1,23 @@
 <div class="party container mt-3">
-  <div class="row">
+  <div class="row" *ngIf="pokemons$ | async; else loading">
     <input class="form-control mt-1" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
       placeholder="001, 002... ou nome">
-    <div class="party_item col-lg-3 col-md-6 col-sm-6 mt-5" *ngFor="let pokemon of pokemons| filter:searchText">
-
+    <div class="party_item col-lg-3 col-md-6 col-sm-6 mt-5" *ngFor="let pokemon of pokemons$ | async | filter:searchText">
       <div class="card">
         <img src="{{ pokemon.sprites.normal }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{ pokemon.name }}</h5>
           <!-- <a [routerLink]="['pokemon/', pokemon._id]" class="btn btn-primary">Info</a> -->
           <div class="party_action">
-            <button type="button" (click)="loadInfosPokemon(pokemon)" class="btn btn-info btn-sm" data-toggle="modal" data-target="#exampleModalCenter">
+            <button type="button" (click)="loadInfosPokemon(pokemon)" class="btn btn-info btn-sm" data-toggle="modal"
+              data-target="#exampleModalCenter">
               Info
             </button>
             <button type="button" class="btn btn-outline-info btn-sm" (click)="indicatesForBattle(pokemon)">Go
               {{ pokemon.name }}</button>
           </div>
-
         </div>
       </div>
-
       <!-- Modal -->
       <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -46,7 +44,33 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
+
+  <ng-template #loading>
+    <div class="spinner-grow text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow text-secondary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow text-success" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow text-warning" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow text-info" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow text-light" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow text-dark" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </ng-template>
 </div>

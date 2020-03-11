@@ -1,4 +1,4 @@
-export interface Pokemon {
+export interface PokemonInterface {
     national_number: String,
     evolution: String,
     sprites: {

@@ -1,5 +1,7 @@
 import { PokemonService } from './../../services/pokemon.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Observable } from 'rxjs';
+import { PokemonInterface } from '../../interfaces/pokemon'
 
 @Component({
   selector: 'app-pokemon-party',
@@ -7,6 +9,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./pokemon-party.component.scss']
 })
 export class PokemonPartyComponent implements OnInit {
+
+  public pokemons$: Observable<PokemonInterface[]>
 
   public pokemons = []
   private pokemonGo = {}
@@ -22,10 +26,7 @@ export class PokemonPartyComponent implements OnInit {
   constructor(private pokemonService: PokemonService) { }
 
   ngOnInit() {
-    this.pokemonService.listAll()
-      .subscribe((pokemons: any) => {
-        this.pokemons = pokemons
-       })
+    this.pokemons$ = this.pokemonService.listAll()
   }
 
   indicatesForBattle(pokemon: any) {

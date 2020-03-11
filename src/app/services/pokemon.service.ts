@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { tap, delay, map } from 'rxjs/operators';
+import { tap, delay, map, shareReplay } from 'rxjs/operators';
 
-import { Pokemon } from '../../app/interfaces/pokemon';
+import { PokemonInterface } from '../../app/interfaces/pokemon';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -17,12 +17,12 @@ export class PokemonService {
   constructor(private http: HttpClient) { }
 
   listAll() {
-    return this.http.get<Pokemon[]>(`${this.API}/`)
-      .pipe()
+    return this.http.get<PokemonInterface[]>(`${this.API}/`) 
+    .pipe(shareReplay(1))
   }
 
   getPokemonDetail(pokemonId: any) {
-    return this.http.get<Pokemon>(`${this.API}/${pokemonId}`)
+    return this.http.get<PokemonInterface>(`${this.API}/${pokemonId}`)
       .pipe(
         // tap(console.log)
       )
