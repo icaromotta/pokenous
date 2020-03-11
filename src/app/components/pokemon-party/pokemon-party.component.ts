@@ -11,7 +11,12 @@ export class PokemonPartyComponent implements OnInit {
   public pokemons = []
   private pokemonGo = {}
   public searchText: string
-  public pokemonDetail = {}
+  public pokemonDetail = {
+    hp: '',
+    attack: '',
+    defense: '',
+    speed: ''
+  }
   
   constructor(private pokemonService: PokemonService) { }
 
